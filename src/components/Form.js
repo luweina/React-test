@@ -30,12 +30,13 @@ function Form(props) {
         type="text"
         id="new-todo-input"
         className="input input__lg"
+        placeholder="Enter somethings"
         name="text"
         autoComplete="off"
         value={name}
         onChange={handleChange}
       />
-      <button type="submit" className="btn btn__primary btn__lg">
+      <button data-testid = "hi" type="submit" className="btn btn__primary btn__lg">
         Add
       </button>
     </form>

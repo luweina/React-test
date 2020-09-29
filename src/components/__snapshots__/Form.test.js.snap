@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot test for Form component snapshot 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <h2
+    className="label-wrapper"
+  >
+    <label
+      className="label__lg"
+      htmlFor="new-todo-input"
+    >
+      What needs to be done?
+    </label>
+  </h2>
+  <input
+    autoComplete="off"
+    className="input input__lg"
+    id="new-todo-input"
+    name="text"
+    onChange={[Function]}
+    placeholder="Enter somethings"
+    type="text"
+    value=""
+  />
+  <button
+    className="btn btn__primary btn__lg"
+    data-testid="hi"
+    type="submit"
+  >
+    Add
+  </button>
+</form>
+`;
