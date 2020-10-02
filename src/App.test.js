@@ -24,16 +24,3 @@ describe("App component renders properly", () => {
 
 
 
-// it("allow user to input new todos", () => {
-
-
-//     const {getByText, getByLabelText} = render (<App asks={DATA} />)
-//     const input = getByLabelText("What needs to be done?")
-
-//     fireEvent.change(input, {target: {value: "sleep a little"}})
-//     fireEvent.click(getByText("Add"))
-
-
-//     getByText("sleep a little ")
-
-// })

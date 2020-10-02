@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Form(props) {
   const [name, setName] = useState('');
+
+
 
 
   function handleSubmit(e) {
@@ -11,7 +13,9 @@ function Form(props) {
     }
     props.addTask(name);
     setName("");
+
   }
+
 
 
   function handleChange(e) {

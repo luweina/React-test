@@ -3,6 +3,7 @@ import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 import Todo from "./components/Todo";
 import { nanoid } from "nanoid";
+import ClearButton from "./components/Clear"
 
 
 function usePrevious(value) {
@@ -24,6 +25,24 @@ const FILTER_NAMES = Object.keys(FILTER_MAP);
 function App(props) {
   const [tasks, setTasks] = useState(props.tasks);
   const [filter, setFilter] = useState('All');
+
+
+  useEffect(() => {
+    if(localStorage.getItem("listofData")) {
+      setTasks (JSON.parse(localStorage.getItem("listofData")))
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("listofData", JSON.stringify(tasks))
+  }, [tasks])
+
+  const clearTasks =  (id) => {
+    localStorage.clear();
+    setTasks (props.tasks)
+
+  }
+
 
   function toggleTaskCompleted(id) {
     const updatedTasks = tasks.map(task => {
@@ -69,7 +88,11 @@ function App(props) {
       deleteTask={deleteTask}
       editTask={editTask}
     />
+
   ));
+
+
+
 
   const filterList = FILTER_NAMES.map(name => (
     <FilterButton
@@ -83,6 +106,10 @@ function App(props) {
   function addTask(name) {
     const newTask = { id: "todo-" + nanoid(), name: name, completed: false };
     setTasks([...tasks, newTask]);
+
+
+
+
   }
 
 
@@ -114,7 +141,10 @@ function App(props) {
       >
         {taskList}
       </ul>
+      <ClearButton clear = {clearTasks} />
     </div>
+
+
   );
 }
 
