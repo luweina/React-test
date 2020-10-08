@@ -20,7 +20,7 @@ ul {
   list-style: none;
   padding: 0;
 }
-button {
+/* button {
   border: none;
   margin: 0;
   padding: 0;
@@ -36,7 +36,7 @@ button {
 }
 button::-moz-focus-inner {
   border: 0;
-}
+} */
 button,
 input,
 optgroup,
@@ -59,8 +59,8 @@ body {
   max-width: 68rem;
   margin: 0 auto;
   font: 1.6rem/1.25 Arial, sans-serif;
-  background-color: #f5f5f5;
-  color: #4d4d4d;
+
+
 }
 @media screen and (min-width: 620px) {
   body {
@@ -147,7 +147,7 @@ body {
 }
 /* END GLOBAL STYLES */
 .todoapp {
-  background: #fff;
+  
   margin: 2rem 0 4rem 0;
   padding: 1rem;
   position: relative;
